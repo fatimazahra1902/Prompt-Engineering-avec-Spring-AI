@@ -13,9 +13,7 @@ import java.util.List;
 
 public class Test1 {
     public static void main(String[] args) {
-        /*String openaiApiKey = System.getenv("OPENAI_API_KEY");
-
-        OpenAiApi openAiApi = new OpenAiApi(openaiApiKey);
+        /*OpenAiApi openAiApi = new OpenAiApi("${OPENAI_API_KEY}");
         OpenAiChatModel openAiChatModel = new OpenAiChatModel(openAiApi, OpenAiChatOptions.builder()
                 .withModel("gpt-4o")
                 .withTemperature(0F)
@@ -34,12 +32,16 @@ public class Test1 {
                 """;
         SystemMessage systemMessage = new SystemMessage(systemMessageText);
 
+
+
         String userInputText = """
                 Je pense que je ne suis pas satisfait la qualité de l'écran ,
                 mais le clavier est mauvais alors que pour la souris la qualité est plutot moyenne.
                 par ailleur je pense que cet ordinateur consomme beaucoup d'énergie
                 """;
         UserMessage userMessage = new UserMessage(userInputText);
+
+
 
         String userInputText1 = """
                 Je pense que je suis satisfait la qualité de l'écran , 
