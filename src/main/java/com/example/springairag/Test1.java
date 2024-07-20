@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Test1 {
     public static void main(String[] args) {
-        /*OpenAiApi openAiApi = new OpenAiApi("sk-proj-lx2DBLW1L4UjZKT1KLUnT3BlbkFJqkOT6O5ZEN8XUqUXN3Nl");
+        /*OpenAiApi openAiApi = new OpenAiApi(${OPENAI_API_KEY});
         OpenAiChatModel openAiChatModel = new OpenAiChatModel(openAiApi, OpenAiChatOptions.builder()
                 .withModel("gpt-4o")
                 .withTemperature(0F)
