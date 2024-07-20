@@ -28,6 +28,8 @@ import java.util.List;
 @RestController
 public class ChatRestController {
 
+
+    @Value("${OPENAI_API_KEY}")
     private ChatClient chatClient;
 
 

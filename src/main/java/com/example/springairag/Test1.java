@@ -13,7 +13,9 @@ import java.util.List;
 
 public class Test1 {
     public static void main(String[] args) {
-        /*OpenAiApi openAiApi = new OpenAiApi(${OPENAI_API_KEY});
+        /*String openaiApiKey = System.getenv("OPENAI_API_KEY");
+
+        OpenAiApi openAiApi = new OpenAiApi(openaiApiKey);
         OpenAiChatModel openAiChatModel = new OpenAiChatModel(openAiApi, OpenAiChatOptions.builder()
                 .withModel("gpt-4o")
                 .withTemperature(0F)
@@ -23,25 +25,21 @@ public class Test1 {
         String systemMessageText = """
                 Vous etes un assistant qui specialisé dans le domaine de l'analyse des sentiment.
                 Votre taches est d'extraire à partir d'un commentaire le sentiment des différents aspects des ordinateurs
-                achetés par des clients. Les aspects qui nous intéressent sont : 
-                l'écran, la souris et le clavier. le sentiment peut etre : positif , négatif ou neutre 
-                le résultat attendu sera au format JSON avec les champs suivants : 
-                - clavier : le sentiments relatif au clavier 
+                achetés par des clients. Les aspects qui nous intéressent sont :
+                l'écran, la souris et le clavier. le sentiment peut etre : positif , négatif ou neutre
+                le résultat attendu sera au format JSON avec les champs suivants :
+                - clavier : le sentiments relatif au clavier
                 - souris : le sentiments relatif avec la souris
                 - ecran : le sentiments relatif avec l'écran
                 """;
         SystemMessage systemMessage = new SystemMessage(systemMessageText);
 
-
-
         String userInputText = """
-                Je pense que je ne suis pas satisfait la qualité de l'écran , 
+                Je pense que je ne suis pas satisfait la qualité de l'écran ,
                 mais le clavier est mauvais alors que pour la souris la qualité est plutot moyenne.
                 par ailleur je pense que cet ordinateur consomme beaucoup d'énergie
                 """;
         UserMessage userMessage = new UserMessage(userInputText);
-
-
 
         String userInputText1 = """
                 Je pense que je suis satisfait la qualité de l'écran , 
